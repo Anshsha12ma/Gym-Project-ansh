@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register - FitPhysique</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-tabs">
+                <button class="tab-btn active" data-form="login">Login</button>
+                <button class="tab-btn" data-form="register">Register</button>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="form active" action="login.php" method="post">
+                <h2>Login to Your Account</h2>
+                <?php if(isset($login_err)) { ?>
+                    <div class="error-message"><?php echo $login_err; ?></div>
+                <?php } ?>
+                <div class="form-group">
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                    <?php if(isset($username_err)) { ?>
+                        <span class="error"><?php echo $username_err; ?></span>
+                    <?php } ?>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                    <?php if(isset($password_err)) { ?>
+                        <span class="error"><?php echo $password_err; ?></span>
+                    <?php } ?>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="form" action="register.php" method="post">
+                <h2>Create New Account</h2>
+                <div class="form-group">
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                    <?php if(isset($username_err)) { ?>
+                        <span class="error"><?php echo $username_err; ?></span>
+                    <?php } ?>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="full_name" required>
+                    <label>Full Name</label>
+                    <?php if(isset($full_name_err)) { ?>
+                        <span class="error"><?php echo $full_name_err; ?></span>
+                    <?php } ?>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                    <?php if(isset($email_err)) { ?>
+                        <span class="error"><?php echo $email_err; ?></span>
+                    <?php } ?>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                    <?php if(isset($password_err)) { ?>
+                        <span class="error"><?php echo $password_err; ?></span>
+                    <?php } ?>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="confirm_password" required>
+                    <label>Confirm Password</label>
+                    <?php if(isset($confirm_password_err)) { ?>
+                        <span class="error"><?php echo $confirm_password_err; ?></span>
+                    <?php } ?>
+                </div>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const forms = document.querySelectorAll('.form');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons and forms
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    forms.forEach(f => f.classList.remove('active'));
+
+                    // Add active class to clicked button and corresponding form
+                    btn.classList.add('active');
+                    document.getElementById(`${btn.dataset.form}-form`).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #f5f0f0;
+  display: cover;
+}
+
+
+.header{
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  text-align: center;
+  padding: 200px;
+  border: 2px solid #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding-bottom: 300px;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-image: url('kajal.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+h1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+}
+p{
+  display: inline-block;
+
+}
+.topics{
+  padding-left: 20px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 30px;
+}
+
+/* chest */
+
+.post-box{
+  padding-left: 20px;
+  color: #ffffff;
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+.post-box1 {
+  width: 300px;
+  margin: 20px;
+  height: 400px;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(97, 69, 69, 0.2);
+  background-color: #ffffff;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+/* Dark overlay on hover */
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.image-container:hover::after {
+  opacity: 1;
+}
+
+.category-label {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.post-title {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.post-title :hover{
+  color: red;
+  transition-behavior: 4sec;
+
+}
+
+
+.image-container6 {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+}
+
+.image-container6 img {
+  width: 150%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.image-container6:hover img {
+  transform: scale(1.1);
+}
+
+/* Dark overlay on hover */
+.image-container6::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.image-container6:hover::after {
+  opacity: 1;
+}
+
+.category-label6 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.post-title6 {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #020202;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

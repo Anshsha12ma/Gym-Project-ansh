@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.chat_cantainer{
+    width: 100%;
+    height: 80%;
+    background-color: rgb(230, 230, 230);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow: auto;
+    font-size: 20px;
+
+}
+.user-chat-box{
+    width: 60%;
+    position: relative;
+    left: 40%;
+}
+.ai-chat-box{
+    width: 60%;
+}
+
+.user-chat-area{
+    width: 90%;
+    padding: 20px;
+    background-color: rgb(48, 47, 47);
+    color: aliceblue;
+    border-radius: 40px 0px 40px 40px;
+    box-shadow: 2px 2px 2px black;
+    right: 10%;
+}
+
+.ai-chat-area{
+    width: 90%;
+    padding: 20px;
+    background-color: rgb(84, 80, 80);
+    position: relative;
+    left: 10%;
+    color: aliceblue;
+    border-radius: 0px 40px 40px 50px;
+    box-shadow: 2px 2px 2px black ;
+}
+
+#userimage{
+    position: absolute;
+    right: 0;
+    filter: drop-shadow(2px 2px 2px black);
+}
+#aiimage{
+    position: absolute;
+    left: 0;
+    filter: drop-shadow(2px 2px 2px black);
+}
+
+.promt-area{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.promt-area input{
+    width: 50%;
+    height: 80px;
+    background-color: black;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    padding: 20px;
+    color: aliceblue;
+    font-size: 20px;
+}
+.promt-area button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.promt-area button:hover{
+    background-color: rgb(62, 56, 56);
+}
+
+
+
